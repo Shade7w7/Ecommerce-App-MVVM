@@ -32,6 +32,7 @@ import com.optic.ecommerceappmvvm.presentation.components.DefaultTextField
 import com.optic.ecommerceappmvvm.presentation.navigation.screen.auth.AuthScreen
 import com.optic.ecommerceappmvvm.presentation.screens.auth.login.LoginViewModel
 import com.optic.ecommerceappmvvm.presentation.ui.theme.Blue700
+import com.optic.ecommerceappmvvm.presentation.ui.theme.Green500
 
 
 @Composable
@@ -59,7 +60,7 @@ fun LoginContent(navController: NavHostController, paddingValues: PaddingValues,
             contentScale = ContentScale.Crop,
             colorFilter = ColorFilter.colorMatrix(
                 ColorMatrix().apply {
-                    setToScale(0.6f, 0.6f, 0.6f, 1f)
+                    setToScale(0.3f, 0.3f, 0.3f, 1f)
                 }
             )
         )
@@ -71,28 +72,49 @@ fun LoginContent(navController: NavHostController, paddingValues: PaddingValues,
         ) {
             Image(
                 modifier = Modifier
-                    .height(100.dp)
-                    .width(100.dp),
-                painter = painterResource(id = R.drawable.shopping_cart_blue),
+                    .height(200.dp)
+                    .width(200.dp),
+                painter = painterResource(id = R.drawable.logoagroservicios),
                 contentDescription = "Logo"
             )
             Text(
-                modifier = Modifier.padding(top = 7.dp),
-                text = "ECOMMERCE APP",
+                modifier = Modifier.padding(top = 26.dp),
+                text = "Bienvenido a",
                 fontWeight = FontWeight.Bold,
                 color = Color.White,
-                fontSize = 22.sp
+                fontSize = 26.sp
             )
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(top = 17.dp),
+                horizontalArrangement = Arrangement.Center
+            ) {
+                Text(
+                    text = "Agro",
+                    fontWeight = FontWeight.Bold,
+                    color = Color.White,
+                    fontSize = 26.sp
+                )
+                Text(
+                    modifier = Modifier.clickable { navController.navigate(route = AuthScreen.Register.route) },
+                    fontWeight = FontWeight.Bold,
+                    text = "Servicios",
+                    color = Green500,
+                    fontSize = 26.sp
+                )
+            }
             Spacer(modifier = Modifier.weight(1f))
             Card(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .height(330.dp),
+                    .height(330.dp)
+                    .padding(horizontal = 10.dp),
                 shape = RoundedCornerShape(
                     topEnd = 40.dp,
                     topStart = 40.dp
                 ),
-                backgroundColor = Color.White.copy(alpha = 0.8f)
+                backgroundColor = Color.White.copy(alpha = 0.9f)
             ) {
                 Column(
                     modifier = Modifier
@@ -100,8 +122,8 @@ fun LoginContent(navController: NavHostController, paddingValues: PaddingValues,
                         .verticalScroll(rememberScrollState())
                 ) {
                     Text(
-                        modifier = Modifier.padding(bottom = 20.dp),
-                        text = "INGRESAR",
+                        modifier = Modifier.padding(bottom = 18.dp),
+                        text = "Ingresar",
                         fontWeight = FontWeight.Bold,
                         fontSize = 17.sp,
                         color = Color.Black
@@ -117,7 +139,9 @@ fun LoginContent(navController: NavHostController, paddingValues: PaddingValues,
                         keyboardType = KeyboardType.Email
                     )
                     DefaultTextField(
-                        modifier = Modifier.fillMaxWidth(),
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(bottom = 10.dp),
                         value = state.password,
                         onValueChange = { text ->
                             vm.onPasswordInput(text)
@@ -132,8 +156,9 @@ fun LoginContent(navController: NavHostController, paddingValues: PaddingValues,
                         modifier = Modifier
                             .fillMaxWidth()
                             .height(50.dp),
-                        text = "LOGIN",
+                        text = "Entrar",
                         onClick = { vm.login() },
+                        color = Green500
                     )
                     Spacer(modifier = Modifier.height(10.dp))
                     Row(
@@ -143,14 +168,15 @@ fun LoginContent(navController: NavHostController, paddingValues: PaddingValues,
                         horizontalArrangement = Arrangement.Center
                     ) {
                         Text(
-//                           modifier = Modifier.padding(end = 6.dp),
-                            text = "¿No tienes cuenta?"
+                            text = "¿No tienes cuenta?",
+                            fontWeight = FontWeight.Bold
                         )
                         Spacer(modifier = Modifier.width(6.dp))
                         Text(
                             modifier = Modifier.clickable { navController.navigate(route = AuthScreen.Register.route) },
                             text = "Registrate",
-                            color = Blue700
+                            color = Green500,
+                            fontWeight = FontWeight.Bold
                         )
                     }
                 }

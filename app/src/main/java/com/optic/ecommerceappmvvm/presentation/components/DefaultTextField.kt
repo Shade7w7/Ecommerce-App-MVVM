@@ -1,12 +1,9 @@
 package com.optic.ecommerceappmvvm.presentation.components
 
-import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.Icon
 import androidx.compose.material.OutlinedTextField
 import androidx.compose.material.Text
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Email
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
@@ -15,7 +12,7 @@ import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.sp
-import com.optic.ecommerceappmvvm.presentation.ui.theme.Blue500
+import com.optic.ecommerceappmvvm.presentation.ui.theme.Green500
 
 @Composable
 fun DefaultTextField(
@@ -44,7 +41,7 @@ fun DefaultTextField(
             Icon(
                 imageVector = icon,
                 contentDescription = "",
-                tint = Blue500
+                tint = Green500
             )
         },
         keyboardOptions = KeyboardOptions(keyboardType = keyboardType),
