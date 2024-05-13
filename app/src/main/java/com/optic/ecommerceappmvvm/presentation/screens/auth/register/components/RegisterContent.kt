@@ -54,12 +54,12 @@ fun RegisterContent(paddingValues: PaddingValues, vm: RegisterViewModel = hiltVi
         ) {
         Image(
             modifier = Modifier.fillMaxSize(),
-            painter = painterResource(id = R.drawable.banner_form),
+            painter = painterResource(id = R.drawable.banner),
             contentDescription = "",
             contentScale = ContentScale.Crop,
             colorFilter = ColorFilter.colorMatrix(
                 ColorMatrix().apply {
-                    setToScale(0.6f, 0.6f, 0.6f, 1f)
+                    setToScale(0.3f, 0.3f, 0.3f, 1f)
                 }
             )
         )
@@ -69,36 +69,37 @@ fun RegisterContent(paddingValues: PaddingValues, vm: RegisterViewModel = hiltVi
             horizontalAlignment = Alignment.CenterHorizontally,
 
         ) {
-            Row(
+            Column(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(top = 35.dp),
-                verticalAlignment = Alignment.CenterVertically,
-                horizontalArrangement = Arrangement.Center
+                    .padding(top = 40.dp),
+                horizontalAlignment = Alignment.CenterHorizontally
             ) {
                 Image(
                     modifier = Modifier
-                        .height(80.dp)
-                        .width(80.dp),
-                    painter = painterResource(id = R.drawable.user_form),
-                    contentDescription = ""
+                        .height(200.dp)
+                        .width(200.dp),
+                    painter = painterResource(id = R.drawable.logoagroservicios),
+                    contentDescription = "Logo"
                 )
                 Text(
                     modifier = Modifier.padding(top = 7.dp, start = 10.dp),
-                    text = "INGRESA ESTA INFORMACION",
+                    text = "Ingrese la información",
                     fontWeight = FontWeight.Bold,
-                    fontSize = 16.sp,
+                    fontSize = 20.sp,
                     color = Color.White
                 )
             }
             Spacer(modifier = Modifier.weight(1f))
             Card(
-                modifier = Modifier.fillMaxWidth(),
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(horizontal = 10.dp),
                 shape = RoundedCornerShape(
                     topStart = 40.dp,
                     topEnd = 40.dp
                 ),
-                backgroundColor = Color.White.copy(alpha = 0.8f)
+                backgroundColor = Color.White.copy(alpha = 0.9f)
             ) {
                 Column(modifier = Modifier
                     .padding(top = 30.dp, start = 30.dp, end = 30.dp, bottom = 30.dp)
@@ -106,7 +107,7 @@ fun RegisterContent(paddingValues: PaddingValues, vm: RegisterViewModel = hiltVi
                 ) {
                     Text(
                         modifier = Modifier.padding(bottom = 20.dp),
-                        text = "REGISTRARSE",
+                        text = "Registrarse",
                         fontWeight = FontWeight.Bold,
                         fontSize = 17.sp,
                         color = Color.Black
@@ -135,14 +136,14 @@ fun RegisterContent(paddingValues: PaddingValues, vm: RegisterViewModel = hiltVi
                         icon = Icons.Default.Email,
                         keyboardType = KeyboardType.Email
                     )
-                    DefaultTextField(
+                    /*DefaultTextField(
                         modifier = Modifier.fillMaxWidth(),
                         value = state.phone,
                         onValueChange = { text -> vm.onPhoneInput(text) },
                         label = "Telefono",
                         icon = Icons.Default.Phone,
                         keyboardType = KeyboardType.Number
-                    )
+                    )*/
                     DefaultTextField(
                         modifier = Modifier.fillMaxWidth(),
                         value = state.password,
@@ -152,7 +153,7 @@ fun RegisterContent(paddingValues: PaddingValues, vm: RegisterViewModel = hiltVi
                         keyboardType = KeyboardType.Password,
                         hideText = true
                     )
-                    DefaultTextField(
+                    /*DefaultTextField(
                         modifier = Modifier.fillMaxWidth(),
                         value = state.confirmPassword,
                         onValueChange = { text -> vm.onConfirmPasswordInput(text) },
@@ -160,13 +161,13 @@ fun RegisterContent(paddingValues: PaddingValues, vm: RegisterViewModel = hiltVi
                         icon = Icons.Outlined.Lock,
                         keyboardType = KeyboardType.Password,
                         hideText = true
-                    )
+                    )*/
                     Spacer(modifier = Modifier.height(15.dp))
                     DefaultButton(
                         modifier = Modifier
                             .fillMaxWidth()
                             .height(50.dp),
-                        text = "CONFIRMAR",
+                        text = "Crear Cuenta",
                         onClick = { vm.register() }
                     )
                 }
