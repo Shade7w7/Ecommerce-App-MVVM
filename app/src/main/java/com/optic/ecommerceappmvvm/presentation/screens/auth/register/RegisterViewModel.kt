@@ -73,16 +73,8 @@ class RegisterViewModel @Inject constructor(private val authUseCase: AuthUseCase
             errorMessage = "Ingresa el email"
             return false
         }
-        else if (state.phone == "") {
-            errorMessage = "Ingresa el telefono"
-            return false
-        }
         else if (state.password == "") {
             errorMessage = "Ingresa el password"
-            return false
-        }
-        else if (state.confirmPassword == "") {
-            errorMessage = "Ingresa el password de confirmacion"
             return false
         }
         else if (!Patterns.EMAIL_ADDRESS.matcher(state.email).matches()) {
@@ -93,11 +85,6 @@ class RegisterViewModel @Inject constructor(private val authUseCase: AuthUseCase
             errorMessage = "La contraseña debe tener al menos 6 caracteres"
             return false
         }
-        else if (state.password != state.confirmPassword) {
-            errorMessage = "Las contraseñas no coinciden"
-            return false
-        }
-
         return true
     }
 

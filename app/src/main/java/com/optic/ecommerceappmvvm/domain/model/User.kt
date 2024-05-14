@@ -10,16 +10,17 @@ import java.net.URLEncoder
 import java.nio.charset.StandardCharsets
 
 data class User(
-    @SerializedName("id") val id: String? = null,
-    @SerializedName("name") var name: String,
-    @SerializedName("lastname") var lastname: String,
-    @SerializedName("email") val email: String? = null,
-    @SerializedName("phone") var phone: String,
-    @SerializedName("password") val password: String? = null,
-    @SerializedName("image") var image: String? = null,
-    @SerializedName("notification_token") val notificationToken: String? = null,
+    @SerializedName("id_user") val id: String? = null,
+    @SerializedName("firstname_user") var name: String,
+    @SerializedName("lastname_user") var lastname: String,
+    @SerializedName("email_user") val email: String? = null,
+    @SerializedName("phone_user") var phone: String,
+    @SerializedName("password_user") val password: String? = null,
+    @SerializedName("image_user") var image: String? = null,
+    @SerializedName("token") val notificationToken: String? = null,
     @SerializedName("roles") val roles: List<Rol>? = null,
-    @SerializedName("address") var address: Address? = null,
+    @SerializedName("address") var address: Address? = null
+
 ): Serializable {
 
     fun toJson(): String = Gson().toJson(User(
