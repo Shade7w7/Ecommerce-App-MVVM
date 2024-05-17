@@ -30,7 +30,7 @@ import com.optic.ecommerceappmvvm.presentation.screens.client.address.create.Cli
 fun ClientAddressCreateContent(paddingValues: PaddingValues, vm: ClientAddressCreateViewModel = hiltViewModel()) {
 
     val state = vm.state
-
+//12
     Column(
         modifier = Modifier
             .padding(paddingValues = paddingValues)

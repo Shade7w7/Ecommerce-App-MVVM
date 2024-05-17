@@ -6,8 +6,10 @@ import androidx.navigation.compose.composable
 import androidx.navigation.navigation
 import com.optic.ecommerceappmvvm.presentation.navigation.Graph
 import com.optic.ecommerceappmvvm.presentation.navigation.screen.auth.AuthScreen
+import com.optic.ecommerceappmvvm.presentation.screens.admin.home.AdminHomeScreen
 import com.optic.ecommerceappmvvm.presentation.screens.auth.login.LoginScreen
 import com.optic.ecommerceappmvvm.presentation.screens.auth.register.RegisterScreen
+import com.optic.ecommerceappmvvm.presentation.screens.client.home.ClientHomeScreen
 
 fun NavGraphBuilder.AuthNavGraph(navController: NavHostController) {
     navigation(
@@ -20,5 +22,6 @@ fun NavGraphBuilder.AuthNavGraph(navController: NavHostController) {
         composable(route = AuthScreen.Register.route) {
             RegisterScreen(navController)
         }
+
     }
 }

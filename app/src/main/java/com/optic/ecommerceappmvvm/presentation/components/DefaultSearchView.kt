@@ -31,7 +31,7 @@ fun DefaultSearchView(
                 },
                 label = {
                     Text(
-                        text = "Buscar producto",
+                        text = "Buscar servicios",
                         fontSize = 15.sp
                     )
                 },
@@ -56,7 +56,7 @@ fun DefaultSearchView(
             )
         },
         backgroundColor = Color.White,
-
+/*
         actions = {
 
             IconButton(onClick = { navController.navigate(route = ShoppingBagScreen.ShoppingBag.route) }) {
@@ -68,5 +68,6 @@ fun DefaultSearchView(
             }
 
         }
+*/
     )
 }

@@ -13,8 +13,6 @@ import retrofit2.http.Path
 
 interface UsersService {
 
-    // http://192.168.1.15:3000/users
-
     @PUT("users/{id}")
     suspend fun update(
         @Path("id") id: String,

@@ -31,7 +31,6 @@ import com.optic.ecommerceappmvvm.presentation.components.DefaultButton
 import com.optic.ecommerceappmvvm.presentation.components.DefaultTextField
 import com.optic.ecommerceappmvvm.presentation.navigation.screen.auth.AuthScreen
 import com.optic.ecommerceappmvvm.presentation.screens.auth.login.LoginViewModel
-import com.optic.ecommerceappmvvm.presentation.ui.theme.Blue700
 import com.optic.ecommerceappmvvm.presentation.ui.theme.Green500
 
 
@@ -108,7 +107,7 @@ fun LoginContent(navController: NavHostController, paddingValues: PaddingValues,
             Card(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .height(330.dp)
+                    .heightIn(min = 400.dp)
                     .padding(horizontal = 10.dp),
                 shape = RoundedCornerShape(
                     topEnd = 40.dp,
@@ -160,6 +159,17 @@ fun LoginContent(navController: NavHostController, paddingValues: PaddingValues,
                         onClick = { vm.login() },
                         color = Green500
                     )
+
+                    Spacer(modifier = Modifier.height(10.dp))
+                    DefaultButton(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .height(50.dp),
+                        text = "Entrar como Invitado",
+                        onClick = { vm.login() },
+                        color = Green500
+                    )
+
                     Spacer(modifier = Modifier.height(10.dp))
                     Row(
                         modifier = Modifier

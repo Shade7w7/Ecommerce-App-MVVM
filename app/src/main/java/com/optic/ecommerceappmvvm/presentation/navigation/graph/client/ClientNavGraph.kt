@@ -27,11 +27,11 @@ fun ClientNavGraph(navController: NavHostController) {
         composable(route = ClientScreen.CategoryList.route) {
             ClientCategoryListScreen(navController)
         }
-
+/*
         composable(route = ClientScreen.OrderList.route) {
             ClientOrderListScreen(navController)
         }
-
+*/
         composable(route = ClientScreen.Profile.route) {
             ProfileScreen(navController)
         }

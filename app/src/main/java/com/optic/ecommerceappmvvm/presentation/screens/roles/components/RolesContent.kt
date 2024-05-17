@@ -31,9 +31,11 @@ fun RolesContent(paddingValues: PaddingValues, navController: NavHostController,
     ) {
         
         items(
-            items = data?.roles ?: arrayListOf()
+            items = data?.roles ?: arrayListOf() //devuelve cada uno de los roles
         ) { rol ->
-           RolesItem(rol = rol, navController = navController)
+            RolesItem(rol = rol, navController = navController)
+
         }
+
     }
 }
