@@ -90,7 +90,7 @@ fun ClientProductDetailContent(paddingValues: PaddingValues, vm: ClientProductDe
                     modifier = Modifier.padding(vertical = 10.dp),
                     color = Gray100
                 )
-                Text(
+                /*Text(
                     modifier = Modifier.padding(bottom = 7.dp),
                     text = "Tu orden",
                     fontWeight = FontWeight.Bold,
@@ -103,14 +103,14 @@ fun ClientProductDetailContent(paddingValues: PaddingValues, vm: ClientProductDe
                 Text(
                     text = "Precio C/U: ${vm.price}",
                     fontSize = 15.sp
-                )
+                )*/
                 Spacer(modifier = Modifier.weight(1f))
                 Row(
                     modifier = Modifier.fillMaxWidth(),
                     horizontalArrangement = Arrangement.SpaceEvenly,
                     verticalAlignment = Alignment.CenterVertically
                 ) {
-                    Card(
+                    /*Card(
                         modifier = Modifier.width(100.dp).height(35.dp),
                         shape = RoundedCornerShape(10.dp),
                         backgroundColor = Gray700
@@ -138,12 +138,12 @@ fun ClientProductDetailContent(paddingValues: PaddingValues, vm: ClientProductDe
                             )
                         }
                     }
-
-                    DefaultButton(
+                    */
+                    /*DefaultButton(
                         modifier = Modifier.width(200.dp),
                         text = "AGREGAR",
                         onClick = { vm.saveItem() }
-                    )
+                    )*/
                 }
 
             }

@@ -45,12 +45,12 @@ fun ProfileContent(paddingValues: PaddingValues, navController: NavHostControlle
         .padding(bottom = 55.dp)) {
         Image(
             modifier = Modifier.fillMaxSize(),
-            painter = painterResource(id = R.drawable.profile_background),
+            painter = painterResource(id = R.drawable.banner),
             contentDescription = "",
             contentScale = ContentScale.Crop,
             colorFilter = ColorFilter.colorMatrix(
                 ColorMatrix().apply {
-                    setToScale(0.6f, 0.6f, 0.6f, 1f)
+                    setToScale(0.3f, 0.3f, 0.3f, 1f)
                 }
             )
         )
@@ -116,7 +116,7 @@ fun ProfileContent(paddingValues: PaddingValues, navController: NavHostControlle
                     topEnd = 40.dp,
                     topStart = 40.dp
                 ),
-                backgroundColor = Color.White.copy(alpha = 0.7f)
+                backgroundColor = Color.White.copy(alpha = 0.9f)
             ) {
                 
                 Column(
