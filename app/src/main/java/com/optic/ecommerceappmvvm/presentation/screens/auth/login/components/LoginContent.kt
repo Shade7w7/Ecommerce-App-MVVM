@@ -77,7 +77,7 @@ fun LoginContent(navController: NavHostController, paddingValues: PaddingValues,
                 contentDescription = "Logo"
             )
             Text(
-                modifier = Modifier.padding(top = 26.dp),
+                modifier = Modifier.padding(top = 16.dp),
                 text = "Bienvenido a",
                 fontWeight = FontWeight.Bold,
                 color = Color.White,
@@ -86,7 +86,7 @@ fun LoginContent(navController: NavHostController, paddingValues: PaddingValues,
             Row(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(top = 17.dp),
+                    .padding(top = 5.dp),
                 horizontalArrangement = Arrangement.Center
             ) {
                 Text(
