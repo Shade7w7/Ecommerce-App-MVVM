@@ -38,13 +38,6 @@ import androidx.compose.ui.unit.Density
 
 @Composable
 fun RolesScreen(navController: NavHostController) {
-/*
-    Scaffold(
-        topBar = { DefaultTopBar(title = "SELECCIONA UN ROL") }
-    ) { paddingValues ->
-        RolesContent(paddingValues, navController)
-    }
-*/
     Column(
         modifier = Modifier
             .fillMaxSize()

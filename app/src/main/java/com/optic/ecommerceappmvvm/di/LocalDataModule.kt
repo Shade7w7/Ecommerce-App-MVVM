@@ -5,7 +5,6 @@ import com.optic.ecommerceappmvvm.data.dataSource.local.dao.AddressDao
 import com.optic.ecommerceappmvvm.data.dataSource.local.datastore.AuthDatastore
 import com.optic.ecommerceappmvvm.data.dataSource.local.dao.CategoriesDao
 import com.optic.ecommerceappmvvm.data.dataSource.local.dao.ProductsDao
-import com.optic.ecommerceappmvvm.data.dataSource.local.dao.ShoppingBagDao
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -23,9 +22,6 @@ object LocalDataModule {
 
     @Provides
     fun provideProductsLocalDataSource(productsDao: ProductsDao): ProductsLocalDataSource = ProductsLocalDataSourceImpl(productsDao)
-
-    @Provides
-    fun provideShoppingBagLocalDataSource(shoppingBagDao: ShoppingBagDao): ShoppingBagLocalDataSource = ShoppingBagLocalDataSourceImpl(shoppingBagDao)
 
     @Provides
     fun provideAddressLocalDataSource(addressDao: AddressDao): AddressLocalDataSource = AddressLocalDataSourceImpl(addressDao)

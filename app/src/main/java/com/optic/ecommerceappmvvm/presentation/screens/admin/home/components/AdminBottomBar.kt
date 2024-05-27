@@ -12,7 +12,6 @@ fun AdminBottomBar(navController: NavHostController) {
     val screens = listOf(
 //        AdminScreen.ProductList,
         AdminScreen.CategoryList,
-        AdminScreen.OrderList,
         AdminScreen.Profile,
     )
 

@@ -19,7 +19,6 @@ fun ClientHomeScreen(navController: NavHostController = rememberNavController())
 
         bottomBar = { ClientBottomBar(navController = navController) }
     ) { paddingValues ->
-//      Box(modifier = Modifier.padding(paddingValues))
         ClientNavGraph(navController = navController)
     }
 }

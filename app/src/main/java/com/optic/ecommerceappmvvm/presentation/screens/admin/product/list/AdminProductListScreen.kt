@@ -29,7 +29,7 @@ fun AdminProductListScreen(navController: NavHostController, categoryParam: Stri
     Scaffold(
         topBar = {
                  DefaultTopBar(
-                     title = "Productos",
+                     title = "Servicios",
                      navController = navController,
                      upAvailable = true
                  )

@@ -19,14 +19,14 @@ object ResponseToRequest {
             }
             else {
                 val errorResponse: ErrorResponse? = ConvertErrorBody.convert(result.errorBody())
-                Resource.Failure(errorResponse?.message ?: "Error desconido")
+                Resource.Failure(errorResponse?.message ?: "Error desconocido")
             }
         }
         catch (e: HttpException) {
             Log.d("ResponseToRequest", "Message: ${e.message()}")
             Log.d("ResponseToRequest", "Message: ${e.cause}")
             e.printStackTrace()
-            Resource.Failure(e.message ?: "Error desconido en la peticion Http")
+            Resource.Failure(e.message ?: "Error desconocido en la peticion Http")
         }
         catch (e: IOException) {
             Log.d("ResponseToRequest", "Message: ${e}")
@@ -38,7 +38,7 @@ object ResponseToRequest {
             Log.d("ResponseToRequest", "Message: ${e}")
             Log.d("ResponseToRequest", "Message: ${e.cause}")
             e.printStackTrace()
-            Resource.Failure(e.message ?: "Error desconido")
+            Resource.Failure(e.message ?: "Error desconocido")
         }
     }
 

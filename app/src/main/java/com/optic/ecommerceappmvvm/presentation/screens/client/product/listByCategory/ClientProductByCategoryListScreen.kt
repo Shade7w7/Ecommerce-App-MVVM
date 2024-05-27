@@ -27,7 +27,7 @@ fun ClientProductByCategoryListScreen(navController: NavHostController, category
     Scaffold(
         topBar = {
                  DefaultTopBar(
-                     title = "Productos",
+                     title = "Servicios",
                      navController = navController,
                      upAvailable = true
                  )

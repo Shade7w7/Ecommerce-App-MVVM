@@ -8,7 +8,6 @@ import com.optic.ecommerceappmvvm.presentation.navigation.Graph
 import com.optic.ecommerceappmvvm.presentation.navigation.graph.profile.ProfileNavGraph
 import com.optic.ecommerceappmvvm.presentation.navigation.screen.client.ClientScreen
 import com.optic.ecommerceappmvvm.presentation.screens.client.category.list.ClientCategoryListScreen
-import com.optic.ecommerceappmvvm.presentation.screens.client.order.list.ClientOrderListScreen
 import com.optic.ecommerceappmvvm.presentation.screens.client.product.ClientProductListScreen
 import com.optic.ecommerceappmvvm.presentation.screens.profile.info.ProfileScreen
 
@@ -27,11 +26,7 @@ fun ClientNavGraph(navController: NavHostController) {
         composable(route = ClientScreen.CategoryList.route) {
             ClientCategoryListScreen(navController)
         }
-/*
-        composable(route = ClientScreen.OrderList.route) {
-            ClientOrderListScreen(navController)
-        }
-*/
+
         composable(route = ClientScreen.Profile.route) {
             ProfileScreen(navController)
         }
@@ -39,8 +34,5 @@ fun ClientNavGraph(navController: NavHostController) {
         ProfileNavGraph(navController)
         ClientCategoryNavGraph(navController)
         ClientProductNavGraph(navController)
-        ShoppingBagNavGraph(navController)
-        ClientOrderNavGraph(navController)
-
     }
 }

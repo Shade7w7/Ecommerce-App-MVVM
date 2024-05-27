@@ -166,7 +166,7 @@ fun LoginContent(navController: NavHostController, paddingValues: PaddingValues,
                             .fillMaxWidth()
                             .height(50.dp),
                         text = "Entrar como Invitado",
-                        onClick = { vm.login() },
+                        onClick = { vm.login2() },
                         color = Green500
                     )
 

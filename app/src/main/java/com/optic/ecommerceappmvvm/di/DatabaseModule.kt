@@ -5,7 +5,6 @@ import androidx.room.Room
 import com.optic.ecommerceappmvvm.data.dataSource.local.dao.AddressDao
 import com.optic.ecommerceappmvvm.data.dataSource.local.dao.CategoriesDao
 import com.optic.ecommerceappmvvm.data.dataSource.local.dao.ProductsDao
-import com.optic.ecommerceappmvvm.data.dataSource.local.dao.ShoppingBagDao
 import com.optic.ecommerceappmvvm.data.dataSource.local.db.EcommerceDB
 import dagger.Module
 import dagger.Provides
@@ -29,10 +28,6 @@ object DatabaseModule {
     @Provides
     @Singleton
     fun provideProductsDao(db: EcommerceDB): ProductsDao = db.productsDao()
-
-    @Provides
-    @Singleton
-    fun provideShoppingBagDao(db: EcommerceDB): ShoppingBagDao = db.shoppingBagDao()
 
     @Provides
     @Singleton

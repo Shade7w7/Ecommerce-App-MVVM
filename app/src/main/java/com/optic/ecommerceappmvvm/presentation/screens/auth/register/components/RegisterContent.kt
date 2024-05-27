@@ -112,7 +112,6 @@ fun RegisterContent(paddingValues: PaddingValues, vm: RegisterViewModel = hiltVi
                         fontSize = 17.sp,
                         color = Color.Black
                     )
-
                     DefaultTextField(
                         modifier = Modifier.fillMaxWidth(),
                         value = state.name,
@@ -120,7 +119,6 @@ fun RegisterContent(paddingValues: PaddingValues, vm: RegisterViewModel = hiltVi
                         label = "Nombres",
                         icon = Icons.Default.Person,
                     )
-
                     DefaultTextField(
                         modifier = Modifier.fillMaxWidth(),
                         value = state.lastname,
@@ -136,14 +134,6 @@ fun RegisterContent(paddingValues: PaddingValues, vm: RegisterViewModel = hiltVi
                         icon = Icons.Default.Email,
                         keyboardType = KeyboardType.Email
                     )
-                    /*DefaultTextField(
-                        modifier = Modifier.fillMaxWidth(),
-                        value = state.phone,
-                        onValueChange = { text -> vm.onPhoneInput(text) },
-                        label = "Telefono",
-                        icon = Icons.Default.Phone,
-                        keyboardType = KeyboardType.Number
-                    )*/
                     DefaultTextField(
                         modifier = Modifier.fillMaxWidth(),
                         value = state.password,
@@ -153,15 +143,6 @@ fun RegisterContent(paddingValues: PaddingValues, vm: RegisterViewModel = hiltVi
                         keyboardType = KeyboardType.Password,
                         hideText = true
                     )
-                    /*DefaultTextField(
-                        modifier = Modifier.fillMaxWidth(),
-                        value = state.confirmPassword,
-                        onValueChange = { text -> vm.onConfirmPasswordInput(text) },
-                        label = "Confirmar Contraseña",
-                        icon = Icons.Outlined.Lock,
-                        keyboardType = KeyboardType.Password,
-                        hideText = true
-                    )*/
                     Spacer(modifier = Modifier.height(15.dp))
                     DefaultButton(
                         modifier = Modifier

@@ -7,7 +7,6 @@ import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
-import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.runBlocking
 import okhttp3.OkHttpClient
@@ -70,17 +69,4 @@ object NetworkModule {
     fun provideAddressService(retrofit: Retrofit): AddressService {
         return retrofit.create(AddressService::class.java)
     }
-
-    @Provides
-    @Singleton
-    fun provideMercadoPagoService(retrofit: Retrofit): MercadoPagoService {
-        return retrofit.create(MercadoPagoService::class.java)
-    }
-
-    @Provides
-    @Singleton
-    fun provideOrdersService(retrofit: Retrofit): OrdersService {
-        return retrofit.create(OrdersService::class.java)
-    }
-
 }

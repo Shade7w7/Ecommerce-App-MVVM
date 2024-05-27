@@ -23,20 +23,12 @@ sealed class ClientScreen(
         title = "Servicios",
         icon = Icons.Default.ThumbUp
     )
-/*
-    object OrderList: ClientScreen(
-        route = "client/order/list",
-        title = "Pedidos",
-        icon = Icons.Default.Info
-    )
-*/
+
     object Profile: ClientScreen(
         route = "client/profile",
         title = "Perfil",
         icon = Icons.Default.Person
     )
-
-
 
 }
 

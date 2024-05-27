@@ -145,9 +145,6 @@ fun ProfileUpdateContent(paddingValues: PaddingValues, vm: ProfileUpdateViewMode
                         onClick = { vm.onUpdate() }
                     )
                 }
-                
-
-
             }
         }
     }

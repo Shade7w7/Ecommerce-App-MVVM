@@ -17,11 +17,7 @@ sealed class AdminScreen(
         title = "Categorias",
         icon = Icons.Default.List
     )
-    object OrderList: AdminScreen(
-        route = "admin/order/list",
-        title = "Pedidos",
-        icon = Icons.Default.Info
-    )
+
 //    object ProductList: AdminScreen(
 //        route = "admin/product/list",
 //        title = "Productos",

@@ -52,6 +52,14 @@ class LoginViewModel @Inject constructor(private val authUseCase: AuthUseCase): 
         }
     }
 
+    fun login2() = viewModelScope.launch {
+
+        loginResponse = Resource.Loading // ESPERANDO
+        val result = authUseCase.login(state.email, state.password) // RETORNA UNA RESPUESTA
+        loginResponse = result // EXITOSA / ERROR
+
+    }
+
     fun onEmailInput(email: String) {
         state = state.copy(email = email)
     }

@@ -37,24 +37,8 @@ object RepositoryModule {
     ): ProductsRepository = ProductsRepositoryImpl(productsRemoteDataSource, productsLocalDataSource)
 
     @Provides
-    fun provideShoppingBagRepository(
-        shoppingBagLocalDataSource: ShoppingBagLocalDataSource
-    ): ShoppingBagRepository = ShoppingBagRepositoryImpl(shoppingBagLocalDataSource)
-
-    @Provides
     fun provideAddressRepository(
         addressRemoteDataSource: AddressRemoteDataSource,
         addressLocalDataSource: AddressLocalDataSource
     ): AddressRepository = AddressRepositoryImpl(addressRemoteDataSource, addressLocalDataSource)
-
-    @Provides
-    fun provideMercadoPagoRepository(
-        mercadoPagoRemoteDataSource: MercadoPagoRemoteDataSource
-    ): MercadoPagoRepository = MercadoPagoRepositoryImpl(mercadoPagoRemoteDataSource)
-
-    @Provides
-    fun provideOrdersRepository(
-        ordersRemoteDataSource: OrdersRemoteDataSource
-    ): OrdersRepository = OrdersRepositoryImpl(ordersRemoteDataSource)
-
 }
