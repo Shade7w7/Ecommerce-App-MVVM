@@ -34,4 +34,24 @@ fun Register(navController: NavHostController, vm: RegisterViewModel = hiltViewM
         }
     }
 
+    when(val response = vm.registerResponse) {
+        Resource.Loading -> { ProgressBar() }
+        is Resource.Success -> {
+            LaunchedEffect(Unit) {
+                vm.saveSession(response.data)
+                navController.navigate(route = Graph.ADMIN) {
+                    popUpTo(Graph.AUTH) { inclusive = true }
+                }
+            }
+        }
+        is Resource.Failure -> {
+            Toast.makeText(LocalContext.current, response.message, Toast.LENGTH_LONG).show()
+        }
+        else -> {
+            if (response != null) {
+                Toast.makeText(LocalContext.current, "Error desconocido", Toast.LENGTH_SHORT).show()
+            }
+        }
+    }
+
 }

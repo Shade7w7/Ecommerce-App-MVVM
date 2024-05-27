@@ -33,7 +33,6 @@ fun Login(navController: NavHostController, vm: LoginViewModel = hiltViewModel()
                     }
                 }
             }
-
         }
         is Resource.Failure -> {
             Toast.makeText(LocalContext.current, response.message, Toast.LENGTH_SHORT).show()
