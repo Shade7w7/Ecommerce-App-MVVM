@@ -18,6 +18,7 @@ import com.optic.ecommerceappmvvm.presentation.screens.admin.category.list.compo
 import com.optic.ecommerceappmvvm.presentation.screens.admin.category.list.components.DeleteCategory
 import com.optic.ecommerceappmvvm.presentation.screens.admin.category.list.components.GetCategories
 import com.optic.ecommerceappmvvm.presentation.screens.client.category.list.components.ClientCategoryListContent
+import com.optic.ecommerceappmvvm.presentation.ui.theme.Green500
 
 @Composable
 fun AdminCategoryListScreen(navController: NavHostController) {
@@ -29,7 +30,7 @@ fun AdminCategoryListScreen(navController: NavHostController) {
                 onClick = {
                     navController.navigate(route = Graph.ADMIN_CATEGORY)
                 },
-                backgroundColor = Color.DarkGray
+                backgroundColor = Green500
             ) {
                 Icon(
                     imageVector = Icons.Default.Add,

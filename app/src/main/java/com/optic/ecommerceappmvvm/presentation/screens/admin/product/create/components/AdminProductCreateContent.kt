@@ -140,7 +140,7 @@ fun AdminProductCreateContent(paddingValues: PaddingValues, vm: AdminProductCrea
                     modifier = Modifier.fillMaxWidth(),
                     value = state.name,
                     onValueChange = { vm.onNameInput(it) },
-                    label = "Nombre de la producto",
+                    label = "Nombre del servicio",
                     icon = Icons.Default.List
                 )
                 Spacer(modifier = Modifier.height(10.dp))

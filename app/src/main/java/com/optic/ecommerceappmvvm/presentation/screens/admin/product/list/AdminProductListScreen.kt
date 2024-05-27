@@ -20,6 +20,7 @@ import com.optic.ecommerceappmvvm.presentation.screens.admin.product.list.compon
 import com.optic.ecommerceappmvvm.presentation.screens.admin.product.list.components.DeleteProduct
 import com.optic.ecommerceappmvvm.presentation.screens.admin.product.list.components.GetProducts
 import com.optic.ecommerceappmvvm.presentation.screens.client.product.list.components.ClientProductListContent
+import com.optic.ecommerceappmvvm.presentation.ui.theme.Green500
 
 @Composable
 fun AdminProductListScreen(navController: NavHostController, categoryParam: String) {
@@ -40,7 +41,7 @@ fun AdminProductListScreen(navController: NavHostController, categoryParam: Stri
                 onClick = {
                     navController.navigate(route = AdminCategoryScreen.ProductCreate.passCategory(categoryParse))
                 },
-                backgroundColor = Color.DarkGray
+                backgroundColor = Green500
             ) {
                 Icon(
                     imageVector = Icons.Default.Add,

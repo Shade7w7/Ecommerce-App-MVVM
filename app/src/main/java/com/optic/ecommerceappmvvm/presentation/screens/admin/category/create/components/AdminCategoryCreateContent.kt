@@ -29,6 +29,7 @@ import com.optic.ecommerceappmvvm.presentation.components.DefaultButton
 import com.optic.ecommerceappmvvm.presentation.components.DefaultTextField
 import com.optic.ecommerceappmvvm.presentation.components.DialogCapturePicture
 import com.optic.ecommerceappmvvm.presentation.screens.admin.category.create.AdminCategoryCreateViewModel
+import com.optic.ecommerceappmvvm.presentation.ui.theme.Green500
 
 @Composable
 fun AdminCategoryCreateContent(paddingValues: PaddingValues, vm: AdminCategoryCreateViewModel = hiltViewModel()) {
@@ -105,7 +106,8 @@ fun AdminCategoryCreateContent(paddingValues: PaddingValues, vm: AdminCategoryCr
                 DefaultButton(
                     modifier = Modifier.fillMaxWidth(),
                     text = "Crear categoria",
-                    onClick = { vm.createCategory() }
+                    onClick = { vm.createCategory() },
+                    color = Green500
                 )
             }
 
